@@ -1,0 +1,20 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax and manifest checks
+        run: |
+          node --check extension/app.js
+          node --check extension/webdav.js
+          node --check extension/background.js
+          node --check extension/popup.js
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('extension/manifest.json','utf8'));if(m.manifest_version!==3){throw new Error('manifest_version must be 3')}"

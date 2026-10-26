@@ -1,0 +1,30 @@
+:root{
+  --paper:#101722;--paper-2:#161f2d;--ink:#e9eff9;--ink-2:#b8c4d8;--ink-3:#8f98aa;
+  --line:rgba(255,255,255,.09);--accent:#7d9bff;--accent-ink:#0a0f1b;
+}
+*{box-sizing:border-box}
+body{
+  width:320px;margin:0;padding:14px;background:
+    radial-gradient(420px 260px at 8% -20%,rgba(125,155,255,.18),transparent 62%),
+    var(--paper);
+  color:var(--ink);font:13px/1.5 Inter,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.head{display:flex;align-items:center;gap:8px;padding:2px 2px 12px}
+.logo{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#8aa3ff,#5b7cfa);box-shadow:0 6px 14px -8px rgba(91,124,250,.9)}
+.logo img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+.name{font-weight:600;letter-spacing:.08em;font-size:13px}
+.gear{margin-left:auto;width:28px;height:28px;border:0;background:transparent;color:var(--ink-3);border-radius:8px;display:grid;place-items:center;cursor:pointer}
+.gear:hover{background:var(--paper-2);color:var(--ink)}
+.gear svg,.collect svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.page{border:1px solid var(--line);background:var(--paper-2);border-radius:12px;padding:10px 11px;margin-bottom:10px}
+.eyebrow{font-size:9px;letter-spacing:.12em;color:var(--ink-3)}
+.title{margin-top:5px;font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.host{margin-top:2px;font-size:10px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.collect{width:100%;height:40px;border:0;border-radius:11px;display:flex;align-items:center;justify-content:center;gap:7px;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:500;cursor:pointer;box-shadow:0 10px 22px -14px rgba(125,155,255,.9)}
+.collect:hover{background:#8fa9ff}
+.collect:disabled{background:var(--paper-2);color:var(--ink-3);box-shadow:none;cursor:not-allowed}
+.warn{font-size:10px;color:#e8a05a;text-align:center;margin-top:6px}
+.foot{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:9.5px;color:var(--ink-3)}
+.foot button{border:0;background:transparent;color:var(--ink-2);font:inherit;padding:0;cursor:pointer}
+.foot button:hover{color:var(--accent)}
+.dot{width:3px;height:3px;border-radius:50%;background:var(--ink-3);opacity:.6}

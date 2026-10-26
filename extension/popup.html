@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>稚签</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="head">
+    <span class="logo"><img src="icons/icon48.png" alt="" /></span>
+    <span class="name">稚签</span>
+    <button class="gear" id="settings" title="设置" aria-label="设置">
+      <svg viewBox="0 0 24 24"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+    </button>
+  </header>
+
+  <div class="page">
+    <span class="eyebrow">当前页面</span>
+    <div class="title" id="tabTitle">读取中…</div>
+    <div class="host" id="tabHost">—</div>
+  </div>
+
+  <button class="collect" id="collect" type="button">
+    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+    <span>收藏当前页</span>
+  </button>
+  <div class="warn" id="warn" hidden>这个页面不能收藏</div>
+
+  <footer class="foot">
+    <button id="open" type="button">打开稚签</button>
+    <span class="dot"></span>
+    <span>本地优先 · WebDAV</span>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
